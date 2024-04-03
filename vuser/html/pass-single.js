@@ -42,7 +42,7 @@ $(function(){
             $('#txt_ville_origin').addClass('d-none')
         }
     })
-    $('#check_plainte').on('change',function(){alert()
+    $('#check_plainte').on('change',function(){
         if($(this).is(':checked')){
             $('#plainte').val('R.A.S')
             $('#plainte').prop(disabled,true)
