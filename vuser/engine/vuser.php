@@ -72,9 +72,9 @@ endif;
 if($_a=='insert'):
     $pattern=['email','nom','postnom','prenom','telephone','sexe','nationalite'];
     $sql=SQLs::insert('user',$_REQUEST,$pattern);
-    Db::execute($sql);
+    $id=Db::execute($sql);
 
-    $_l='users';
+    $_l='opt?_s=activate&token='.sha1($id);
 endif;
 if($_a=='update'):
     $_REQUEST['date_nais']="{$_REQUEST['dn_annee']}-{$_REQUEST['dn_mois']}-{$_REQUEST['dn_jour']}";
@@ -85,7 +85,7 @@ if($_a=='update'):
     $_REQUEST['telephone']=$_REQUEST['full_number'];
     $sql=SQLs::update('vuser',$_REQUEST,$pattern); print_r($sql);
     Db::execute($sql);
-    //$_l='users';
+    $_l='';
 endif;
 if($_a=='pwd'):
     if(sha1($old)==$_user['pwd']){

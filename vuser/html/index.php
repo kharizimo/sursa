@@ -83,68 +83,25 @@ $complete_data= (boolean) $info && (boolean) $ident;
     </div>
     <script></script>
     <?php else:?>
-    <div class="alert alert-info alert-dismissible">
+    <div class="alert alert-success alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h5><i class="icon fas fa-info"></i> Alert!</h5>
-      Vous n'avez jusque là effectuez aucun pass sanitaire. <br>
-      Nous vous recommandons de créer votre pass avant d'arriver à destination ! <br>
-      Bon voyage à vous !
+      <h5><i class="icon fas fa-info"></i> Notification !</h5>
+      <b>Vous n'avez aucun pass sanitaire en attente.</b><br>
+      N'hésitez pas à créer votre pass sanitaire lors de votre voyage entrant, sortant ou circulant 
+      dans le sol congolais <br><br>
+      Merci de consulter notre site officiel pour s'enquérir des tous les détails 
+      <div class="text-center mt-3"><a href="profil" class="btn btn-outline-light btn-lg" style="text-decoration:none">Visiter le site officiel</a></div>
     </div>
     <div class="alert alert-info alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <h5><i class="icon fas fa-info"></i> Bon à savoir!</h5>
       <b>Savez-vous qu'en cas d'informations érronées ou froduleuses, vous courez jusqu'à 1.000.000 Fc d'amande ??</b>. <br>
       Nous vous recommandons fortement de bien verifier vos informations afin d'éviter toute pénalité ! <br>
-      Bon voyage à vous !
+      Bon voyage à vous ! <br><br>
+      En cas de besoin nous vous prions de contacter l'équipe SURSA
+      <div class="text-center mt-3"><a href="profil" class="btn btn-outline-light btn-lg" style="text-decoration:none">Aller au contact</a></div>
     </div>
     <?php endif?>
-    <div class="card">
-    <div class="card-body p-0"><table class="table" id="table">
-      <thead><tr>
-        <th>Date de voyage</th>
-        <th>Mouvement</th>
-        <th width="1%"></th>
-        <th width="1%"></th>
-        <th>Etat</th>
-        <th width="1%"></th>
-      </tr></thead>
-      <tbody>
-        <tr>
-          <td>2024-09-12</td>
-          <td>Entant</td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td>En cours</td>
-          <td><a href="" class="btn btn-sm btn-default"><span class="fa fa-eye"></span></a></td>
-        </tr>
-        <tr>
-          <td>2024-09-12</td>
-          <td>Entant</td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td>En cours</td>
-          <td><a href="" class="btn btn-sm btn-default"><span class="fa fa-eye"></span></a></td>
-        </tr>
-        <tr>
-          <td>2024-09-12</td>
-          <td>Entant</td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td>En cours</td>
-          <td><a href="" class="btn btn-sm btn-default"><span class="fa fa-eye"></span></a></td>
-        </tr>
-        <tr>
-          <td>2024-09-12</td>
-          <td>Entant</td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td><span class="fa fa-thumbs-up text-secondary"></span></td>
-          <td>En cours</td>
-          <td><a href="" class="btn btn-sm btn-default"><span class="fa fa-eye"></span></a></td>
-        </tr>
-      </tbody>
-    </table></div>
-    <div class="card-footer text-center"><a href="" class="btn btn-primary">Plus de voyage</a></div>
-    </div>
     
   </div>
 </div>
