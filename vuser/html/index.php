@@ -2,7 +2,7 @@
 $info=(int)Db::get("select if(groupe_sanguin is null or taille is null or date_nais is null,0,1) data from vuser where id={$_user['id']}");
 $ident=(int)Db::get("select count(*) data from ident_vuser where id_vuser={$_user['id']}");
 
-$missing= (boolean) $info && (boolean) $ident;
+$complete_data= (boolean) $info && (boolean) $ident;
 
 ?>
 <!-- Small boxes (Stat box) -->
@@ -70,7 +70,7 @@ $missing= (boolean) $info && (boolean) $ident;
     <div class="row"><div class="col-md-6 text-bold">Etat</div><div class="text-right col-md-6"><?=ucfirst($_user['etat'])?></div></div>
   </div></div></div>
   <div class="col">
-    <?php if(!$missing):?>
+    <?php if(!$complete_data):?>
     <div class="alert alert-danger alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <h5><i class="icon fas fa-ban"></i>Informations réquises !</h5>
@@ -80,6 +80,7 @@ $missing= (boolean) $info && (boolean) $ident;
       En cas de difficulté, merci de contacter l'Equipe SURSA<br><br>
       <div class="text-center"><a href="profil" class="btn btn-outline-light btn-lg" style="text-decoration:none">Aller au profil</a></div>
     </div>
+    <script></script>
     <?php else:?>
     <div class="alert alert-info alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

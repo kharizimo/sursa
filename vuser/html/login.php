@@ -10,7 +10,7 @@ $auth=false;
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg text-bold">Entrez vos coordonnées de connexion</p>
-      <?=isset($err)?'<p class="text-center text-bold text-danger">Echec de connexion</p>':''?>
+      <?=($err)?'<p class="text-center text-bold text-danger">Echec de connexion</p>':''?>
 
       <form action="engine/vuser/login" method="post">
         <div class="input-group mb-3">
