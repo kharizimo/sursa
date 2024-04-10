@@ -5,6 +5,7 @@ $ident=(int)Db::get("select count(*) data from ident_vuser where id_vuser={$_use
 $complete_data= (boolean) $info && (boolean) $ident;
 
 ?>
+</style>
 <!-- Small boxes (Stat box) -->
 <div class="row">
   <div class="col-lg-3 col-6">
@@ -69,7 +70,7 @@ $complete_data= (boolean) $info && (boolean) $ident;
     <div class="row"><div class="col-md-6 text-bold">Dernière mise à jour</div><div class="text-right col-md-6"><?=$_user['dat_edit']?></div></div><hr>
     <div class="row"><div class="col-md-6 text-bold">Etat</div><div class="text-right col-md-6"><?=ucfirst($_user['etat'])?></div></div>
   </div></div></div>
-  <div class="col">
+  <div class="col-md-8">
     <?php if(!$complete_data):?>
     <div class="alert alert-danger alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -98,7 +99,7 @@ $complete_data= (boolean) $info && (boolean) $ident;
     </div>
     <?php endif?>
     <div class="card">
-    <div class="card-body p-0"><table class="table">
+    <div class="card-body p-0"><table class="table" id="table">
       <thead><tr>
         <th>Date de voyage</th>
         <th>Mouvement</th>
@@ -108,7 +109,6 @@ $complete_data= (boolean) $info && (boolean) $ident;
         <th width="1%"></th>
       </tr></thead>
       <tbody>
-        
         <tr>
           <td>2024-09-12</td>
           <td>Entant</td>

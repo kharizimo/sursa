@@ -117,7 +117,7 @@ if($_a=='ident-del'):
 endif;
 //API FOR DATA
 if($_a=='index.table'):
-    $sql="select * from voyage where id_vuser={$_user['id']}";
-    $r=Db::rows($sql);
-    echo $r?json_encode($r):'[]';
+    $sql="select date_voyage,mvt,'' valid,'' verif,'' btn from voyage where id_vuser={$_user['id']}";
+    $r=Db::table($sql);
+    echo $r?json_encode(['data'=>$r]):'{"data":[]}';
 endif;

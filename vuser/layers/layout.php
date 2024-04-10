@@ -24,8 +24,6 @@ $_title=$_title??'Administration'
   <!-- Select2 -->
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <!-- Bootstrap Switch -->
-<script src="<?=$app_root?>assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
   <!-- DataTables -->
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -130,8 +128,7 @@ $_title=$_title??'Administration'
 <script src="<?=$app_root?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="<?=$app_root?>assets/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="<?=$app_root?>assets/plugins/sparklines/sparkline.js"></script>
+
 <!-- JQVMap -->
 <script src="<?=$app_root?>assets/plugins/jqvmap/jquery.vmap.min.js"></script>
 <script src="<?=$app_root?>assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
@@ -164,10 +161,6 @@ $_title=$_title??'Administration'
 <script src="<?=$app_root?>assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=$app_root?>assets/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?=$app_root?>assets/dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?=$app_root?>assets/dist/js/pages/dashboard.js"></script>
 
 <script>
   var iti_tel = document.querySelector(".iti-tel-input");
