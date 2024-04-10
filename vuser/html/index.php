@@ -108,6 +108,7 @@ $complete_data= (boolean) $info && (boolean) $ident;
         <th width="1%"></th>
       </tr></thead>
       <tbody>
+        
         <tr>
           <td>2024-09-12</td>
           <td>Entant</td>

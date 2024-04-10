@@ -31,6 +31,21 @@ class Db{
         catch(exception $e){echo $e->getMessage();}
         return $ret;
     }
+    public static function table($sql){
+        $ret=[];
+        try{
+            $q=self::$cn->query($sql);
+            while($r=$q->fetch()){
+                $row=[];
+                foreach($r as $col){
+                    $row[]=$col;
+                }
+                $ret[]=$row;
+            }
+        }
+        catch(exception $e){echo $e->getMessage();}
+        return $ret;
+    }
     public static function row($sql){
         $ret=[];
         try{

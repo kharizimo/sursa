@@ -115,3 +115,9 @@ if($_a=='ident-del'):
     $sql="delete from ident_vuser where id=$id and id_vuser={$_user['id']}";
     Db::execute($sql);
 endif;
+//API FOR DATA
+if($_a=='index.table'):
+    $sql="select * from voyage where id_vuser={$_user['id']}";
+    $r=Db::rows($sql);
+    echo $r?json_encode($r):'[]';
+endif;
