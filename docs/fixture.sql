@@ -8,8 +8,8 @@ insert into vuser(email,pwd,nom,postnom,prenom,sexe,nationalite) values(
     'me@you.com',sha1(''),'BALONGA','MASIALA','Matthieu','M','République Démocratique du Congo'
 );
 
-truncate type_identite;
-insert into type_identite(lib) values
+truncate piece_identite;
+insert into piece_identite(lib) values
 ('Passeport ordinaire'),
 ('Passeport de service'),
 ('Passeport diplomatique'),

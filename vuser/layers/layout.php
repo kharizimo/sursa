@@ -1,9 +1,12 @@
+<?php 
+$_title=$_title??'Administration'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Sursa | Espace voyageur</title>
 
   
   <!-- Google Font: Source Sans Pro -->
@@ -18,7 +21,15 @@
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/jqvmap/jqvmap.min.css">
-  
+  <!-- Select2 -->
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Bootstrap Switch -->
+<script src="<?=$app_root?>assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?=$app_root?>assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -79,12 +90,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0"><?=$_title?></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item"><a href="./">Accueil</a></li>
+              <li class="breadcrumb-item active"><?=$_title?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -133,6 +144,22 @@
 <script src="<?=$app_root?>assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
 <script src="<?=$app_root?>assets/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="<?=$app_root?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/jszip/jszip.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- InputMask -->
+<script src="<?=$app_root?>assets/plugins/moment/moment.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/inputmask/jquery.inputmask.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="<?=$app_root?>assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
@@ -145,6 +172,12 @@
 <script>
   var iti_tel = document.querySelector(".iti-tel-input");
   if(iti_tel!=undefined){var tel=window.intlTelInput(iti_tel,iti)}
+  var table = $('.datatable').DataTable({
+    language: {
+      url: '<?=$app_root?>assets/plugins/datatable-lang-fr.json',
+      ordering:false
+    },
+});
 </script>
 <script><?=$_script?></script>
 </body>

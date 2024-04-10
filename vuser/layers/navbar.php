@@ -46,19 +46,16 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?=$app_root?>assets/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="<?="{$app_root}res/photo/{$_user['photo']}"?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nom User
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Profile User</p>
+                <h3 class="dropdown-item-title"><?="{$_user['prenom']} {$_user['nom']}"?></h3>
+                <p class="text-sm"><?="{$_user['email']}"?></p>
               </div>
             </div>
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="" class="dropdown-item dropdown-footer text-bold"><span class="text-danger fa fa-power-off"></span> Doconnexion</a>
+          <a href="engine/vuser/logout" class="dropdown-item dropdown-footer text-bold"><span class="text-danger fa fa-power-off"></span> Deconnexion</a>
         </div>
       </li>
     </ul>

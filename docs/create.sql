@@ -21,6 +21,7 @@ create table vuser(
     identite varchar(100),
     t_identite varchar(100),
     photo varchar(100),
+    etat varchar(100) default 'En attente',
     dat_creat datetime default current_timestamp,
     dat_edit datetime default current_timestamp on update current_timestamp
 );
@@ -29,10 +30,11 @@ create table piece_identite(
     id int auto_increment primary key,
     lib varchar(100)
 );
-drop table if exists identite_vuser;
-create table identite_vuser(
-    id int(10) auto_increment primary key,
-    lib varchar(100),
+drop table if exists ident_vuser;
+create table ident_vuser(
+    id int references piece_identite(id),
     id_vuser int references vuser(id),
-    id_identite int references piece_identite(id)
+    numero varchar(100),
+    date_creat datetime default current_timestamp,
+    primary key(id,id_vuser)
 );

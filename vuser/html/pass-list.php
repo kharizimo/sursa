@@ -1,5 +1,5 @@
 <div class="row"><div class="col"><div class="card"><div class="card-body">
-    <table class="table">
+    <table class="table datatable" data-ordering="false">
         <thead><tr>
             <th>Date voyage</th>
             <th>Mouvement</th>

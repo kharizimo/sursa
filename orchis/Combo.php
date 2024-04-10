@@ -92,6 +92,7 @@ class Combo{
         $except=$options['except']??[];
         $selected='';
         $disabled='';
+        $ret='';
         foreach($items as $key=>$val){
             if($default==$key){
                 $selected='selected';
