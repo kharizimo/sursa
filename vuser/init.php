@@ -25,5 +25,6 @@ if(isset($_SESSION['vuser-id'])){
         $_user['dn_mois']=date('m',strtotime($date_nais));
         $_user['dn_jour']=date('d',strtotime($date_nais));
         
+        
     }
 }

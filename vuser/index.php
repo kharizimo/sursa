@@ -22,5 +22,11 @@ if($auth??true){
         exit();
     }
 }
+if($check_missing_info??false){
+    if($user_info_missing){
+        header('location:./');
+        exit();    
+    }
+}
 $layout=$layout??'layout';
 require "layers/$layout.php";

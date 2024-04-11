@@ -68,11 +68,12 @@ create table voyage(
     lang varchar(100),
     id_valid int,
     date_valid datetime,
-    etat_valid varchar(100),
+    etat_valid varchar(100) default '',
     id_verif int,
     date_verif datetime,
-    etat_verif varchar(100),
+    etat_verif varchar(100) default '',
     date_creat datetime default current_timestamp,
     token_code text,
-    token_exp datetime
+    token_exp datetime,
+    etat varchar(100) default 'En attende'
 );

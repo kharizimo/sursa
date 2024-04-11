@@ -4,6 +4,10 @@ $ident=(int)Db::get("select count(*) data from ident_vuser where id_vuser={$_use
 
 $complete_data= (boolean) $info && (boolean) $ident;
 
+$n_attent=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and etat='En attente'");
+$n_valid=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and etat='Valide'");
+$n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and etat='Annulé'");
+
 ?>
 </style>
 <!-- Small boxes (Stat box) -->
