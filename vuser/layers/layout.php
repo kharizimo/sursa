@@ -76,6 +76,14 @@ $_title=$_title??'Administration'
     <img class="animation__shake" src="<?=$app_root?>assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
+  <script>
+    var dataTableOptions={
+      language: {
+        url: '<?=$app_root?>assets/plugins/datatable-lang-fr.json',
+        ordering:false
+      },
+    }
+  </script>
   <?php require 'navbar.php'?>
   <?php require 'sidebar.php'?>
 
@@ -165,12 +173,7 @@ $_title=$_title??'Administration'
 <script>
   var iti_tel = document.querySelector(".iti-tel-input");
   if(iti_tel!=undefined){var tel=window.intlTelInput(iti_tel,iti)}
-  var table = $('.datatable').DataTable({
-    language: {
-      url: '<?=$app_root?>assets/plugins/datatable-lang-fr.json',
-      ordering:false
-    },
-});
+  var table = $('.datatable').DataTable(dataTableOptions);
 </script>
 <script><?=$_script?></script>
 </body>

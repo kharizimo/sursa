@@ -4,9 +4,10 @@ $ident=(int)Db::get("select count(*) data from ident_vuser where id_vuser={$_use
 
 $complete_data= (boolean) $info && (boolean) $ident;
 
-$n_attent=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and etat='En attente'");
-$n_valid=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and etat='Valide'");
-$n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and etat='Annulé'");
+$n_pass=Db::get("select count(*) data from voyage where id_vuser={$_user['id']}");
+$n_pass_attente=Db::get("select count(*) data from voyage where id_vuser={$_user['id']} and etat='En attente'");
+$n_pass_valid=Db::get("select count(*) data from voyage where id_vuser={$_user['id']} and etat='Valide'");
+$n_pass_annule=Db::get("select count(*) data from voyage where id_vuser={$_user['id']} and etat='Annulé'");
 
 ?>
 </style>
@@ -16,7 +17,7 @@ $n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and
     <!-- small box -->
     <div class="small-box bg-info">
       <div class="inner">
-        <h3>0</h3>
+        <h3><?=$n_pass?></h3>
         <p>Tous les pass</p>
       </div>
       <div class="icon">
@@ -29,7 +30,7 @@ $n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and
     <!-- small box -->
     <div class="small-box bg-success">
       <div class="inner">
-        <h3>0</h3>
+        <h3><?=$n_pass_attente?></h3>
         <p>Pass en attente</p>
       </div>
       <div class="icon">
@@ -42,7 +43,7 @@ $n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and
     <!-- small box -->
     <div class="small-box bg-warning">
       <div class="inner">
-        <h3>0</h3>
+        <h3><?=$n_pass_valid?></h3>
         <p>Pass validés</p>
       </div>
       <div class="icon">
@@ -55,7 +56,7 @@ $n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and
     <!-- small box -->
     <div class="small-box bg-danger">
       <div class="inner">
-        <h3>0</h3>
+        <h3><?=$n_pass_annule?></h3>
         <p>Pass annulés</p>
       </div>
       <div class="icon">
@@ -90,9 +91,15 @@ $n_annule=Db::get("select count(*) from voyage where id_vuser={$_user['id']} and
     <div class="alert alert-success alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <h5><i class="icon fas fa-info"></i> Notification !</h5>
+      <?php if(!$n_pass_attente):?>
       <b>Vous n'avez aucun pass sanitaire en attente.</b><br>
       N'hésitez pas à créer votre pass sanitaire lors de votre voyage entrant, sortant ou circulant 
       dans le sol congolais <br><br>
+      <?php else:?>
+        <b>Vous avez <?=$n_pass_attente?> pass sanitaires en attente.</b><br>
+        Les résultats des validations et verifications vous serons transmis à temps réel<br>
+        <b>L'Equipe SURSA vous souhaite un excellent voyage</b><br>
+      <?php endif?>
       Merci de consulter notre site officiel pour s'enquérir des tous les détails 
       <div class="text-center mt-3"><a href="profil" class="btn btn-outline-light btn-lg" style="text-decoration:none">Visiter le site officiel</a></div>
     </div>
