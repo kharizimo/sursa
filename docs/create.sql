@@ -18,12 +18,16 @@ create table vuser(
     date_nais date,
     telephone varchar(100),
     passeport varchar(100),
-    identite varchar(100),
-    t_identite varchar(100),
+    identite json default '{}',
     photo varchar(100),
     etat varchar(100) default 'En attente',
     dat_creat datetime default current_timestamp,
     dat_edit datetime default current_timestamp on update current_timestamp
+);
+drop table if exists identite_lib;
+create table identite_lib(
+    id int auto_increment primary key,
+    lib varchar(100)
 );
 drop table if exists piece_identite;
 create table piece_identite(
@@ -76,4 +80,61 @@ create table voyage(
     token_code text,
     token_exp datetime,
     etat varchar(100) default 'En attende'
+);
+
+-- USER TABLES
+drop table if exists user;
+create table user(
+    id int auto_increment primary key,
+    nom varchar(100),
+    email varchar(100),
+    pwd varchar(100),
+    telephone varchar(100),
+    id_poste int,
+    id_ets int,
+    stategies json default '{}',
+    profil varchar(100),
+    etat varchar(100)
+);
+drop table if exists poste;
+create table poste(
+    id int auto_increment primary key,
+    lib varchar(100),
+    province varchar(100)
+);
+drop table if exists ets;
+create table ets(
+    id int auto_increment primary key,
+    lib varchar(100)
+);
+drop table if exists strategie_lib;
+create table strategie_lib(
+    code varchar(100) primary key,
+    lib varchar(100)
+);
+drop table if exists archive_photo;
+create table archive_photo(
+    id int auto_increment primary key,
+    id_vuser int references vuser(id),
+    photo varchar(100),
+    date_creat datetime default current_timestamp
+);
+drop table if exists archive_info;
+create table archive_info(
+    id int auto_increment primary key,
+    id_vuser int references vuser(id),
+    info json default '{}',
+    date_creat datetime default current_timestamp
+);
+drop table if exists target;
+create table target(
+    id int auto_increment primary key,
+    id_vuser int,
+    nom varchar(100),
+    sexe varchar(100),
+    email varchar(100),
+    telephone varchar(100),
+    date_nais date,
+    identite json default '{}',
+    date_creat datetime default current_timestamp
 );

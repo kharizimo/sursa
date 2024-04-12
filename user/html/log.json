@@ -1,0 +1,6 @@
+{
+    "activate.success":{"title":"Félicitation !.","url":"login","btn":"Se connecter","content":"Votre compte est prêt à l'emploi !<br>Connectez-vous à votre compte puis compléter les informations complémentaires"},
+    "register.exists":{"title":"Echec inscription","url":"register","content":"Votre adresse mail existe déjà. <br>Veuillez vous authentifier avec le compte existant ou contacter l'Equipe SURSA"},
+    "register.fail":{"title":"Echec inscription","url":"register","content":"Une érreur s'est produite lors de l'inscription. <br>Veuillez recommencer la procedure ou contacter l'Equipe SURSA"},
+    "":{"title":"Titre du message","url":"./","content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui totam ipsa dolore eveniet tempora ducimus ratione beatae obcaecati. Culpa non ipsa harum repellendus cumque atque nihil quo ratione nisi unde!"}
+}
