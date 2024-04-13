@@ -68,6 +68,12 @@ $_title=$_title??'Administration'
     separateDialCode: true,
     utilsScript: "<?=$app_root?>assets/build/js/utils.js",
   }
+  var dataTableOptions={
+    language: {
+      url: '<?=$app_root?>assets/plugins/datatable-lang-fr.json',
+    },
+    ordering:false
+  }
 </script>
 <div class="wrapper">
 
@@ -75,15 +81,6 @@ $_title=$_title??'Administration'
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="<?=$app_root?>assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
-
-  <script>
-    var dataTableOptions={
-      language: {
-        url: '<?=$app_root?>assets/plugins/datatable-lang-fr.json',
-        ordering:false
-      },
-    }
-  </script>
   <?php require 'navbar.php'?>
   <?php require 'sidebar.php'?>
 
