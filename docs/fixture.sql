@@ -1,9 +1,9 @@
  truncate user;
- insert into user(email,nom,pwd,id_ets,id_poste) values('kh','Trésor','',1,1);
+ insert into user(email,nom,pwd,id_ets,id_poste) values('kh','Trésor',sha1(''),1,1);
 -- insert into user(pseudo,nom,pwd) values('oliva','Olivier','');
 -- insert into user(pseudo,nom,pwd) values('ddn','Dieudonné','');
 
-truncate v_user;
+truncate vuser;
 insert into vuser(email,pwd,nom,postnom,prenom,sexe,nationalite) values(
     'me@you.com',sha1(''),'BALONGA','MASIALA','Matthieu','M','République Démocratique du Congo'
 );

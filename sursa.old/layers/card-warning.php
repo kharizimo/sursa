@@ -1,0 +1,1 @@
+<div id="amande-text" class="text-bold">Fournir ces informations à un agent frontalier est obligatoire dans le cadre de la riposte sanitaire du virus Covid-19 et autres futures maladies. Ne pas les fournir ou fournir des informations éronées peuvent entrainer un refus d'entrer au sol Congolais ou une amende allant jusqu'à 1.000.000 CDF. </div>

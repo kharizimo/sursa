@@ -2,7 +2,7 @@
 if($_a=='login'):
     extract(SQLs::addslashes_list(['email','pwd']));
     $sql="select * from user where email='$email' and pwd=sha1('$pwd')";
-    $row=Db::row($sql);
+    $row=Db::row($sql);echo$sql;
     if($row){
         $_SESSION['user-id']=$row['id'];
         $_l='';

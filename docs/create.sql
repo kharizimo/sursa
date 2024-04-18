@@ -112,6 +112,12 @@ create table ets(
     id int auto_increment primary key,
     lib varchar(100)
 );
+drop table if exists ville;
+create table ville(
+    id int auto_increment primary key,
+    lib varchar(100),
+    province varchar(100)
+);
 drop table if exists strategie_lib;
 create table strategie_lib(
     code varchar(100) primary key,
