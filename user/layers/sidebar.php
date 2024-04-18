@@ -8,28 +8,25 @@ $_menu=[
   ['title'=>'Deconnexion','url'=>'engine/vuser/logout'],
   ['header'=>'Gestion des activités'],
   ['title'=>'Target','children'=>[
-    ['title'=>'Nouveau target','url'=>''],
-    ['title'=>'Liste des targets','url'=>''],
+    ['title'=>'Nouveau target','url'=>'target-single'],
+    ['title'=>'Liste des targets','url'=>'target-list'],
   ]],
   ['title'=>'Achivage','children'=>[
-    ['title'=>'Archove photo','url'=>''],
-    ['title'=>'Archive informations','url'=>''],
+    ['title'=>'Archove photo','url'=>'archive-photo-list'],
+    ['title'=>'Archive informations','url'=>'archive-info-list'],
   ]],
   ['title'=>'Gestion mouvements','children'=>[
-    ['title'=>'analyse classique','url'=>''],
-    ['title'=>'analyse approfondie','url'=>''],
+    ['title'=>'analyse classique','url'=>'mvt-classique'],
+    ['title'=>'analyse approfondie','url'=>'mvt-approfondie'],
   ]],
   ['title'=>'Gestion profils','children'=>[
-    ['title'=>'analyse classique','url'=>''],
-    ['title'=>'analyse approfondie','url'=>''],
+    ['title'=>'analyse classique','url'=>'profil-classique'],
+    ['title'=>'analyse approfondie','url'=>'profil-approfondie'],
   ]],
   ['header'=>'Paramètes'],
-  ['title'=>'Les postes','url'=>'pass-list?_s=en-attente'],
-  ['title'=>'Les établissements','url'=>'pass-list?_s=valide'],
-  ['title'=>'Utilisateurs','children'=>[
-    ['title'=>'Ajouter','url'=>''],
-    ['title'=>'Liste utilisateurs','url'=>''],
-  ]],
+  ['title'=>'Les postes','url'=>'poste'],
+  ['title'=>'Les établissements','url'=>'ets'],
+  ['title'=>'Les utilisateurs','url'=>'users-list'],
 ]
 ?>
 <!-- Main Sidebar Container -->

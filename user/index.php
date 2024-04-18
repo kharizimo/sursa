@@ -17,7 +17,7 @@ require $url;
 $_modals=ob_get_clean();
 
 if($auth??true){
-    if(!isset($_SESSION['vuser-id'])){
+    if(!isset($_SESSION['user-id'])){
         header('location:login');
         exit();
     }

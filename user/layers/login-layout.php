@@ -16,7 +16,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=$app_root?>assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page lockscreen">
+<body class="hold-transition login-page lockscreen dark-mode">
 <style>
     .iti{flex:1;justify-content: space-between}
 </style>

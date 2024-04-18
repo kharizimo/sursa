@@ -6,13 +6,11 @@ $auth=false;
   <div class="login-logo">
     <a href="./"><b>Espace</b> VOYAGEUR</a>
   </div>
-  <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg text-bold">Entrez vos coordonnées de connexion</p>
       <?=($err)?'<p class="text-center text-bold text-danger">Echec de connexion</p>':''?>
-
-      <form action="engine/vuser/login" method="post">
+      <form action="engine/user/login" method="post">
         <div class="input-group mb-3">
           <input type="text" name="email" class="form-control" placeholder="Email">
           <div class="input-group-append">

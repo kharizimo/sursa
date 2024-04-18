@@ -39,7 +39,7 @@ $_title=$_title??'Administration'
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=$app_root?>assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <style>
     .iti{width:100%}
 </style>

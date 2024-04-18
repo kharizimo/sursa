@@ -3,7 +3,7 @@
         <div class="card"><div class="card-body">
             <div class="row">
                 <div class="col">
-                    <form action="engine/vuser/pwd" method="post">
+                    <form action="engine/user/pwd" method="post">
 
                         <div class="form-group">
                             <label for="">Ancien mot de passe</label>

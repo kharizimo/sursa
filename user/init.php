@@ -16,15 +16,8 @@ $_s=$_s??'';
 $err=$err??'';
 $id=$id??'0';
 
-if(isset($_SESSION['vuser-id'])){
-    $_user=Db::row("select * from vuser where id={$_SESSION['vuser-id']}");
-    $_user['photo']=is_file("../img/avatar/{$_user['photo']}")?$_user['photo']:'0.jpg';
-        if($_user['date_nais']){
-        $date_nais=$_user['date_nais'];
-        $_user['dn_annee']=date('Y',strtotime($date_nais));
-        $_user['dn_mois']=date('m',strtotime($date_nais));
-        $_user['dn_jour']=date('d',strtotime($date_nais));
-        
-        
-    }
+if(isset($_SESSION['user-id'])){
+    $_user=Db::row("select u.*,ets.lib lib_ets,poste.lib lib_poste from user u join ets on u.id_ets=ets.id join poste on u.id_poste=poste.id where u.id={$_SESSION['user-id']}");
+    $_user['photo']='0.jpg';
+       
 }

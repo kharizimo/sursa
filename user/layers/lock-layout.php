@@ -12,7 +12,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=$app_root?>assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition lockscreen">
+<body class="hold-transition lockscreen dark-mode">
 <!-- Automatic element centering -->
 <?=$_content?>
 <!-- /.center -->

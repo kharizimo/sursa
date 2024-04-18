@@ -11,7 +11,9 @@
           <form action="">
               <div class="form-group">
                   <label for="">Identifiant</label>
+                  <select name="" id="" class="form-control"></select>
               </div>
+              <hr>
               <div class="row">
                   <div class="col">
                       <div class="form-group">
@@ -36,14 +38,13 @@
                       </div>
                   </div>
                   <div class="col-md-4">
-                      <img src="<?=$app_root?>http://localhost/skytech/sursa/user/img/avatar/0.jpg" alt="">
+                      <img width="100%" src="<?=$app_root?>/user/img/avatar/0.jpg" alt="">
                   </div>
               </div>
           </form>
       </div>
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer text-right">
+        <button type="button" class="btn btn-primary">Appliquer</button>
       </div>
     </div>
     <!-- /.modal-content -->

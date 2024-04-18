@@ -72,10 +72,13 @@ create table voyage(
     lang varchar(100),
     id_valid int,
     date_valid datetime,
-    etat_valid varchar(100) default '',
+    etat_valid boolean default false,
     id_verif int,
     date_verif datetime,
-    etat_verif varchar(100) default '',
+    etat_verif boolean default false,
+    id_annul int,
+    date_annul datetime,
+    etat_annul boolean default false,
     date_creat datetime default current_timestamp,
     token_code text,
     token_exp datetime,
@@ -100,7 +103,9 @@ drop table if exists poste;
 create table poste(
     id int auto_increment primary key,
     lib varchar(100),
-    province varchar(100)
+    province varchar(100),
+    po varchar(100),
+    flux varchar(100)
 );
 drop table if exists ets;
 create table ets(
@@ -130,11 +135,18 @@ drop table if exists target;
 create table target(
     id int auto_increment primary key,
     id_vuser int,
+    id_target int,
+    date_target datetime,
+    id_untarget int,
+    date_untarget datetime,
+    id_link int,
+    date_link datetime,
     nom varchar(100),
     sexe varchar(100),
     email varchar(100),
     telephone varchar(100),
     date_nais date,
     identite json default '{}',
+    etat varchar(100) default'Actif',
     date_creat datetime default current_timestamp
 );
