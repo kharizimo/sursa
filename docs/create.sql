@@ -68,7 +68,7 @@ create table voyage(
     autres_symptomes text,
     contact_nom varchar(100),
     contact_telephone varchar(100),
-    acdresse text,
+    adresse text,
     lang varchar(100),
     id_valid int,
     date_valid datetime,

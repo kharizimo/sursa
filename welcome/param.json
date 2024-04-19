@@ -5,7 +5,7 @@
         "db_user":"root",
         "db_pwd":"",
         "_root":"http://localhost/www/SKY-TECH/sursa/",
-        "app_root":"http://localhost/www/SKY-TECH/sursa/",
+        "app_root":"http://localhost/skytech/sursa/",
         "db_charset":"utf-0"
     },
     "online":{

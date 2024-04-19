@@ -1,6 +1,6 @@
 <?php 
 class Lang{
-    private static string $_dictionnary=[];
+    private static $_dictionnary=[];
     private static string $_langage='fr';
 
     public static function load($langage='fr',$file='lang.json'){
@@ -10,9 +10,9 @@ class Lang{
         }
     }
     public static function _($text){
-        return self::$_dictionnary[$text][self::$_langage];
+        return self::$_dictionnary[$text][self::$_langage]??$text;
     }
     public static function translate($text){
-        return self::$_dictionnary[$text][self::$_langage];
+        return self::$_dictionnary[$text][self::$_langage]??$text;
     }
 }

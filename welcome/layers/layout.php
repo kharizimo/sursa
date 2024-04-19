@@ -8,18 +8,21 @@
     <!-- Font Awesome Icons -->   
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Select2 -->
-  <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- flag-icon-css -->
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="build/css/intlTelInput.css">
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="plugins/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/build/css/intlTelInput.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?=$app_root?>assets/plugins/flag-icon-css/css/flag-icon.min.css">
   <script>
+    
     var validators={rules:{},messages:{}}
     var iti={
       // allowDropdown: false,
@@ -77,31 +80,12 @@
     <?=$_header?>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" style="background-image:url(img/bg/<?=$_bg[$_bg_cible]['url']?>)">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 badge badge-light text-danger mb-1"> <?=$title?$title:'Sursa | '.Lang::translate('Accueil') ?></h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item badge badge-danger p-2" data-toggle="tooltip" data-html="true" title="">
-                <i><?=$_bg[$_bg_cible]['title']?></i>
-              </li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
+  <div class="content-wrapper" style="padding-top:40px;background-image:url(img/bg/<?=$_bg?>)">
+        <!-- Main content -->
     <div class="content">
       <div class="container">
         <?php if($flash_info??true):?>
-        <div class="p-2 text-bold mb-2 rounded text-white" style="background:rgba(0,0,0,.5)"><marquee behavior="" direction=""><?php foreach($_news as $item){echo $item.'&nbsp; &star;&star;&star; &nbsp;';} ?></marquee></div>
+        
         <?php endif?>
         <?=$_content?>
       </div><!-- /.container-fluid -->
@@ -139,24 +123,24 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- jquery-validation -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/additional-methods.min.js"></script>
-<script src="build/js/intlTelInput.js"></script>
+<script src="<?=$app_root?>assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="<?=$app_root?>assets/build/js/intlTelInput.js"></script>
 <!-- Select2 -->
-<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/select2/js/select2.full.min.js"></script>
 <!-- DataTables  & Plugins -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?=$app_root?>assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="<?=$app_root?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script><?=$_script?></script>
 <script><?php require 'modals.js'?></script>

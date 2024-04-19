@@ -1,0 +1,38 @@
+{
+    "bg":[
+        {"url":"kin.jpg","title":"Echangeur - Kinshasa","info":""},
+        {"url":"peroquet.jpg","title":"Peroquet gris","info":""},
+        {"url":"elephant.jpg","title":"Eléphant congolais","info":""},
+        {"url":"parc-salonga.jpg","title":"Parc salonga","info":""},
+        {"url":"Éléphants.jpg","title":"Éléphants","info":""},
+        {"url":"Girafe.jpg","title":"Girafe","info":""},
+        {"url":"Gorille_de_montagne.jpg","title":"Gorille de montagne","info":""},
+        {"url":"Gorille.jpg","title":"Gorille","info":""},
+        {"url":"Hippopotame.jpg","title":"Hippopotame","info":""},
+        {"url":"Léopard_d_Afrique.jpg","title":"Léopard d'Afrique","info":""},
+        {"url":"Léopard_d_Afrique1.jpg","title":"Léopard d'Afrique","info":""},
+        {"url":"Léopard_d_Afrique2.jpg","title":"Léopard d'Afrique","info":""},
+        {"url":"Lion_1.jpg","title":"Lion","info":""},
+        {"url":"Lion_2.jpg","title":"Lion","info":""},
+        {"url":"Lion_3.jpg","title":"Lion","info":""},
+        {"url":"Lion_4.jpg","title":"Lion","info":""},
+        {"url":"Lion.jpg","title":"Lion","info":""},
+        {"url":"Mangrove.jpg","title":"Mangrove","info":""},
+        {"url":"OKAPI.jpg","title":"OKAPI","info":""},
+        {"url":"OKAPI1.jpg","title":"OKAPI1","info":""},
+        {"url":"Perroquet_gris3.jpg","title":"Perroquet gris","info":""},
+        {"url":"Perroquet_gris2.jpg","title":"Perroquet gris","info":""},
+        {"url":"Perroquet_gris1.jpg","title":"Perroquet gris","info":""},
+        {"url":"Perroquet_gris.jpg","title":"Perroquet gris","info":""},
+        {"url":"Perroquet_vert_du_Congo.jpg","title":"Perroquet vert du Congo","info":""},
+        {"url":"Poisson_globe_géant_du_Congo.jpg","title":"Poisson globe géant du Congo","info":""},
+        {"url":"Poisson_Tétra_du_Congo.jpg","title":"Poisson Tétra du Congo","info":""},
+        {"url":"Rhinocéros.jpg","title":"Rhinocéros","info":""},
+        {"url":"Rhinocéros1.jpg","title":"Rhinocéros","info":""},
+        {"url":"Éléphants_d_Afrique.jpg","title":"Éléphants d'Afrique","info":""}
+    ],
+    "news":[
+        "Bienvenue en République Démocratique du Congo",
+        "Les pass sanitaires sont actuellement obligatoires dans tous les aéroports de la RDC"
+    ]
+}

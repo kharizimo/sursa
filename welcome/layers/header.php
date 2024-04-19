@@ -1,7 +1,7 @@
 <?php 
 $_id=$_SESSION['v-user']??0;
-$a=Db::get("select photo data from v_user where id=$_id");
-$a_nom=Db::get("select concat(nom,' ',mid(upper(prenom),1,1),'.') data from v_user where id=$_id");
+$a=Db::get("select photo data from vuser where id=$_id");
+$a_nom=Db::get("select concat(nom,' ',mid(upper(prenom),1,1),'.') data from vuser where id=$_id");
 $avatar=is_file("img/avatar/$a")?"img/avatar/$a":"img/avatar/0.png";
 $home='./';
 $user_home='user.home';
@@ -53,10 +53,10 @@ if(preg_match('/user/',$_c)){
         
         <!-- Language Dropdown Menu -->
         <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#"><i class="flag-icon flag-icon-<?=Lang::$lang?>"></i></a>
+          <a class="nav-link" data-toggle="dropdown" href="#"><i class="flag-icon flag-icon-<?=$_lang?>"></i></a>
           <div class="dropdown-menu dropdown-menu-right p-0">
-              <a href="engine/common/lang?lang=fr" class="dropdown-item <?=Lang::$lang=='fr'?'active':''?>"><i class="flag-icon flag-icon-fr mr-2"></i> French</a>
-              <a href="engine/common/lang?lang=us" class="dropdown-item <?=Lang::$lang=='us'?'active':''?>"><i class="flag-icon flag-icon-us mr-2"></i> English</a>
+              <a href="engine/common/lang?lang=fr" class="dropdown-item <?=$_lang=='fr'?'active':''?>"><i class="flag-icon flag-icon-fr mr-2"></i> French</a>
+              <a href="engine/common/lang?lang=us" class="dropdown-item <?=$_lang=='us'?'active':''?>"><i class="flag-icon flag-icon-us mr-2"></i> English</a>
           </div>
         </li>
 
@@ -66,7 +66,7 @@ if(preg_match('/user/',$_c)){
         </li>
         <?php endif ?>
         <!-- Notifications Dropdown Menu -->
-        <?php if(isset($_SESSION['v-user'])):?>
+        <?php if(isset($_SESSION['vuser-id'])):?>
         <li class="nav-item dropdown">
           <a title="Connexion Espace voyageur" class="nav-link" data-toggle="dropdown" href="#">
             <!-- <i class="far fa-user"></i> -->

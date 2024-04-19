@@ -1,5 +1,5 @@
 <?php 
-$data=Db::row("select *,year(now())-year(date_nais) age from v_user where id='".($_SESSION['v-user']??'0')."'");
+$data=Db::row("select *,year(now())-year(date_nais) age from vuser where id='".($_SESSION['v-user']??'0')."'");
 $data['photo']=$data['photo']??'';
 $photo=is_file("img/avatar/{$data['photo']}")?"img/avatar/{$data['photo']}":"img/avatar/0.png";
 ?>

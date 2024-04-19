@@ -4,13 +4,13 @@ $list_type_doc=[
     'Carte d\'Identité Nationale',
     'Permis de conduire',
 ];
-$cbo_type_doc=Utils::combobox(['array'=>$list_type_doc,'no_data'=>'Préciser le type de document pour ce voyage'])
+$cbo_type_doc=Combo::array($list_type_doc,['no_data'=>'Préciser le type de document pour ce voyage'])
 ?>
 <div class="row">
     <div class="col-md-4 form-group">
         <label for="">Date de voyage<span class="text-danger">*</span></label>
         <select name="jour_voyage" id="jour_voyage" class="form-control">
-            <?=Utils::combobox(['count'=>[1,31],'zero'=>2,'no_data'=>'Jour'])?>
+            <?=Combo::count([1,31],['zero'=>2,'no_data'=>'Jour'])?>
         </select>
     </div>
     <div class="col-md-4 form-group">
@@ -22,7 +22,7 @@ $cbo_type_doc=Utils::combobox(['array'=>$list_type_doc,'no_data'=>'Préciser le 
     <div class="col-md-4 form-group">
         <label for="">&nbsp;</label>
         <select name="annee_voyage" id="annee_voyage" class="form-control">
-            <?=Utils::combobox(['count'=>[2024,2025],'no_data'=>'Année'])?>
+            <?=Combo::count([2024,2025],['no_data'=>'Année'])?>
         </select>
     </div>
 </div>
@@ -42,7 +42,7 @@ $cbo_type_doc=Utils::combobox(['array'=>$list_type_doc,'no_data'=>'Préciser le 
         <input type="hidden" name="compagnie" id="compagnie" data-target="">
         <select class="d-none comp form-control" onchange="$('#compagnie').val($(this).val())">
             <option value="-1" disabled selected><?=Lang::translate("Séléctionnez")?></option>
-            <?=Utils::combobox(['array'=>$aeroports]) ?>
+            <?=Combo::array($aeroports) ?>
         </select>
         <input type="text" onchange="$('#compagnie').val($(this).val())" placeholder="<?=Lang::translate("Compagnies")?>" class="form-control comp">
     </div>

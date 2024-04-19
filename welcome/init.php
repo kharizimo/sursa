@@ -34,7 +34,7 @@ $param=json_decode(file_get_contents(__DIR__.'/param.json'),true);
 Db::connect($param[$launch]);
 extract($_REQUEST);
 $_mvt=$_SESSION['_mvt']??'';
-
+$app_root=$param[$launch]['app_root'];
 
 $_bg=$param['bg']??[];
 $_news=$param['news']??[];

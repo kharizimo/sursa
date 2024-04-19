@@ -1,12 +1,19 @@
 <?php
-require 'init.php';
+require '../init.php';
 
-if($mode=='off'){
-    require('maintenance.php');
-    exit();
+$feat=json_decode(file_get_contents('features.json'),true);
+$_bgs=$feat['bg'];
+$_news=$feat['news'];
+$__bg='';
+if(!isset($_COOKIE['bg'])){
+    $i=rand(0,count($_bgs)-1);
+    $__bg=$_bgs[$i];echo$_bg;
+    setcookie('bg',$__bg,time()+60*60*48,'./');
 }
+$_bg=$_COOKIE['bg']??$__bg;
 
-$layout='layout';
+
+// Partie à enlever
 $default_page=$_SESSION['default_page']??'';
 $card_header_param=['logo'=>true,'country-name'=>true];
 $title=$title??'';
@@ -15,7 +22,11 @@ if(preg_match("/(user|v-user)/",$_c)){
     $flash_info=false;
     $_c=$_c?$_c:'user.home';
 }
+// Fin 
 
+$_SESSION['vuser-id']=1;
+
+$layout='layout';
 ob_start();
 require 'layers/card-profil.php';
 $_card_profil=ob_get_clean();
@@ -53,11 +64,5 @@ $url=is_file("html/$_c.js")?"html/$_c.js":"_blank";
 ob_start();
 require $url;
 $_script=ob_get_clean();
-
-if($_login){
-    if(!isset($_SESSION['user'])){
-        header('location:login');
-    }
-}
 
 require "layers/$layout.php";

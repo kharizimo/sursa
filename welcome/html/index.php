@@ -2,8 +2,10 @@
 $_card_title="";
 $_card_warning="";
 $title='Accueil';
+
 ?>
 <div class="row"><div class="col">
+<div class="p-2 text-bold mb-2 rounded text-white" style="background:rgba(0,0,0,.5)"><marquee behavior="" direction=""><?php foreach($_news as $item){echo $item.'&nbsp; &star;&star;&star; &nbsp;';} ?></marquee></div>
     <div class="card" id="form">
         <?=$_card_header?>
         <div class="card-body">

@@ -1,0 +1,20 @@
+{
+    "online":{
+        "host":"44.56.200.10",
+        "user":"roro123",
+        "pwd":"JHKLHLHK",
+        "name":"roro_db_user",
+        "app_root":"https://monsite.com/"
+    },
+    "offline":{
+        "host":"localhost",
+        "user":"root",
+        "pwd":"",
+        "name":"sursa",
+        "app_root":"http://localhost/skytech/sursa/"
+    },
+    "app":{
+        "vendor_name":"Sky Technologies",
+        "vendor_website":"https://skytechnologies.com"
+    }
+}

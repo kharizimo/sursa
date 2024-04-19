@@ -5,3 +5,4 @@ require_once 'Combo.php';
 require_once 'SQLs.php';
 require_once 'URLs.php';
 require_once 'Vars.php';
+require_once 'Lang.php';

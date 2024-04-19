@@ -1,15 +1,15 @@
 <?php 
-$title=Lang::translate("Sortant");
-if(!isset($_SESSION['v-user'])){
+$title=Lang::translate("Entrant");
+if(!isset($_SESSION['vuser-id'])){
     header('location:./');
     exit();
 }
 ?>
 <div class="row"><form id="forms" method="post" action="engine/voyage/tmp-insert" class="col">
-    <input type="hidden" name="id_v_user" value="<?=$_SESSION['v-user']?>">
-    <input type="hidden" name="mvt" value="sortant">
+    <input type="hidden" name="id_v_user" value="<?=$_SESSION['vuser-id']?>">
+    <input type="hidden" name="mvt" value="entrant">
     <input type="hidden" name="lang" value="<?=Lang::$lang?>">
-    <input type="hidden" name="ville_actuelle" id="ville_actuelle">
+    <input type="hidden" name="ville_destination" id="ville_destination">
     <div class="card">
         <?=$_card_header?>
         <div class="card-body">
@@ -17,14 +17,21 @@ if(!isset($_SESSION['v-user'])){
             <?=$_card_voyage?><hr>
             <div class="row">
                 <div class="col-md-3">
-                    <label for="">Province actuelle</label>
-                    <select name="province_actuelle" id="province_actuelle" class="form-control">
+                    <label for="">Pays de provenance</label>
+                    <select name="pays_visite" id="pays_visite" class="form-control">
+                        <option value="-1" disabled selected>Séléctionnez</option>
+                        <?=Utils::combobox(['array'=>$countries[Lang::$lang]])?>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="">Province destination</label>
+                    <select name="province_destination" id="province_destination" class="form-control">
                         <option value="-1" disabled selected>Séléctionnez</option>
                         <?=Utils::combobox(['array'=>$provinces])?>
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <label for="">Ville actuelle</label>
+                    <label for="">Ville de destination</label>
                     <select class="form-control ville_option">
                         <option value="-1" disabled selected>Séléctionnez</option>
                         <option value="0">Autre ville</option>
@@ -33,14 +40,7 @@ if(!isset($_SESSION['v-user'])){
             
                 <div class="col-md-3 form-group">
                     <label for="">Préciser la ville</label>
-                    <input style="text-transform:uppercase" type="text" class="form-control ville_option" disabled>
-                </div>
-                <div class="col-md-3">
-                    <label for="">Pays de destination</label>
-                    <select name="pays_destination" id="pays_destination" class="form-control">
-                        <option value="-1" disabled selected>Séléctionnez</option>
-                        <?=Utils::combobox(['array'=>$countries[Lang::$lang]])?>
-                    </select>
+                    <input type="text" class="form-control ville_option text-upper" disabled>
                 </div>
             </div>
             <hr>
