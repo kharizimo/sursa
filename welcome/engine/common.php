@@ -26,3 +26,8 @@ if($_a=='villes'):
     $data=Db::gets("select lib data from villes where province='$province'");
     echo json_encode($data);
 endif;
+if($_a=='get-ville'):
+    $sql="select lib data from ville where province='$province'";
+    $r=Db::gets($sql);
+    echo $r?json_encode($r):'[]';
+endif;

@@ -11,7 +11,7 @@
         "user":"root",
         "pwd":"",
         "name":"sursa",
-        "app_root":"http://localhost/skytech/sursa/"
+        "app_root":"http://192.168.1.185/skytech/sursa/"
     },
     "app":{
         "vendor_name":"Sky Technologies",

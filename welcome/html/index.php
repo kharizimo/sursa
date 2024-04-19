@@ -12,15 +12,15 @@ $title='Accueil';
             <div class="row">
                 <div class="col-md mb-5 text-center">
                     <label for=""><?=Lang::translate('Voyageur Entrant')?></label>
-                    <a href="engine/common/mvt?mvt=entrant" class="btn-type-voyage btn btn-danger d-block w-100 p-4"><span class="fa fa-plane-arrival" style="font-size:40px"></span></a>
+                    <a href="javascript::void()" data-mvt="entrant" data-id="<?=$_vuser['id']??''?>" class="btn-mvt btn-type-voyage btn btn-danger d-block w-100 p-4"><span class="fa fa-plane-arrival" style="font-size:40px"></span></a>
                 </div>
                 <div class="col-md mb-5 text-center">
                     <label for=""><?=Lang::translate('Voyageur Sortant')?></label>
-                    <a href="engine/common/mvt?mvt=sortant" class="btn-type-voyage btn btn-danger d-block w-100 p-4"><span class="fa fa-plane-departure" style="font-size:40px"></span></a>
+                    <a href="javascript::void()" data-mvt="sortant" data-id="<?=$_vuser['id']??''?>" class="btn-mvt btn-type-voyage btn btn-danger d-block w-100 p-4"><span class="fa fa-plane-departure" style="font-size:40px"></span></a>
                 </div>
                 <div class="col-md mb-5 text-center">
                     <label for=""><?=Lang::translate('Voyageur Circulant')?></label>
-                    <a href="engine/common/mvt?mvt=circulant" class="btn-type-voyage btn btn-danger d-block w-100 p-4"><span class="fa fa-sync" style="font-size:40px"></span></a>
+                    <a href="javascript::void()" data-mvt="circulant" data-id="<?=$_vuser['id']??''?>" class="btn-mvt btn-type-voyage btn btn-danger d-block w-100 p-4"><span class="fa fa-sync" style="font-size:40px"></span></a>
                 </div>
             </div>
             <div class="row"><p class="col text-center h4 text-bold text-black"><?=Lang::translate("Système de surveillance sanitaire des voyageurs entrant, sortant et circulant sur le sol Congolais")?></p></div>

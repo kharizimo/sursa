@@ -7,11 +7,16 @@ $_news=$feat['news'];
 $__bg='';
 if(!isset($_COOKIE['bg'])){
     $i=rand(0,count($_bgs)-1);
-    $__bg=$_bgs[$i];echo$_bg;
+    $__bg=$_bgs[$i]['url'];
     setcookie('bg',$__bg,time()+60*60*48,'./');
 }
 $_bg=$_COOKIE['bg']??$__bg;
 
+$_mvts=[
+    'entrant'=>'fa fa-plane-arrival',
+    'sortant'=>'fa fa-plane-departure',
+    'circulant'=>'fa fa-sync'
+];
 
 // Partie à enlever
 $default_page=$_SESSION['default_page']??'';
