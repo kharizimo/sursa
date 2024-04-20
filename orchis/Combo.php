@@ -60,6 +60,7 @@ class Combo{
         $disabled='';
         $begin=$items[0]??0;
         $end=$items[1]??0;
+        $ret='';
         if($begin<$end):
             for($i=$begin;$i<=$end;$i+=$step){
                 if($i==$default){

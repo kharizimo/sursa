@@ -18,7 +18,7 @@ create table vuser(
     date_nais date,
     telephone varchar(100),
     passeport varchar(100),
-    identite json default '{}',
+    identites json default '{}',
     photo varchar(100),
     etat varchar(100) default 'En attente',
     dat_creat datetime default current_timestamp,
@@ -29,25 +29,12 @@ create table identite_lib(
     id int auto_increment primary key,
     lib varchar(100)
 );
-drop table if exists piece_identite;
-create table piece_identite(
-    id int auto_increment primary key,
-    lib varchar(100)
-);
-drop table if exists ident_vuser;
-create table ident_vuser(
-    id int references piece_identite(id),
-    id_vuser int references vuser(id),
-    numero varchar(100),
-    date_creat datetime default current_timestamp,
-    primary key(id,id_vuser)
-);
 drop table if exists voyage;
 create table voyage(
     id int auto_increment primary key,
     id_vuser int,
-    lib_ident varchar(100),
-    numero_ident varchar(100),
+    lib_identite varchar(100),
+    num_identite varchar(100),
     mvt varchar(100),
     date_voyage date,
     moyen_transport varchar(100),
