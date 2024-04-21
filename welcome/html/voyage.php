@@ -5,71 +5,14 @@
 <?=$_card_header?>
     <div class="card-body"><form action="" id="form">
         <div class="row">
-            <div class="col-md-6">
-                <h4 class="bg-danger p-3 mb-3 " style="border-radius:5px">
-                    <b>Mouvement <?=$mvt??'entrant'?></b>
-                    <span class="<?=$_mvts[$mvt??'entrant']?> float-right"></span>
-                </h4>
-                <img src="<?=$app_root?>vuser/img/avatar/<?=$_vuser['photo']?>" style="max-width:200px;border-radius:10px" id="avatar" class="m-auto d-block" alt="">
-                <hr>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Nom complet</dt>
-                        <dd><?=$_vuser['nom']?> <?=$_vuser['postnom']?> <?=$_vuser['prenom']?></dd>
-                    </dl>
-                    <dl class="col-md-6">
-                        <dt>Nationalité</dt>
-                        <dd><?=$_vuser['nationalite']?></dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Email</dt>
-                        <dd><?=$_vuser['email']?></dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Téléphone</dt>
-                        <dd><?=$_vuser['telephone']?></dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Genre</dt>
-                        <dd><?=$_vuser['sexe']?></dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Groupe sanguin</dt>
-                        <dd><?=$_vuser['groupe_sanguin']?></dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Poids</dt>
-                        <dd><?=$_vuser['poids']?></dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Taille</dt>
-                        <dd><?=$_vuser['taille']?></dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Date de naissance</dt>
-                        <dd><?=$_vuser['date_nais']?></dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Age</dt>
-                        <dd><?=Db::get("select year(now())-year(date_nais) data from vuser where id={$_vuser['id']}")?></dd>
-                    </dl>
-                </div>
-            </div>
+            <?php require_once 'inc.info.php'?>
             <div class="col">
                 <h3>Informations du voyage</h3>
                 <div class="form-group">
                     <label for="">Date de voyage</label>
                     <div class="row">
                         <div class="col"><select name="jour" id="jour" class="form-control"><?=Combo::count([1,31],['zerofill'=>2,'no_data'=>['','Jour']])?></select></div>
-                        <div class="col-md-5"><select name="mois" id="mois" class="form-control"><?=Combo::array(Vars::$mois_fr,['no_data'=>['','Mois']])?></select></div>
+                        <div class="col-md-5"><select name="mois" id="mois" class="form-control"><?=Combo::object(Vars::$mois_fr,['no_data'=>['','Mois']])?></select></div>
                         <div class="col"><select name="annee" id="annee" class="form-control"><?=Combo::count([1930,date('Y')],['no_data'=>['','Année']])?></select></div>
                     </div>
                 </div>
@@ -155,7 +98,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Pays de destination</label>
-                    <select name="pays_destination" id="pays_destination" class="form-control"><?=Combo::array(Vars::$pays_fr,['no_data'=>['','Selectionnez pays']])?></select>
+                    <select name="pays_destination" id="pays_destination" class="form-control select2"><?=Combo::array(Vars::$pays_fr,['no_data'=>['','Selectionnez pays']])?></select>
                 </div>
                 <?php elseif($mvt=='circulant'):?>
                 <div class="form-group prov-loader ">

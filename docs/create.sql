@@ -143,3 +143,22 @@ create table target(
     etat varchar(100) default'Actif',
     date_creat datetime default current_timestamp
 );
+create table target(
+    id int auto_increment primary key,
+    id_vuser int,
+    nom varchar(100),
+    postnom varchar(100),
+    prenom varchar(100),
+    telephone varchar(100),
+    date_nais date,
+    num_identite varchar(100),
+    qualite varchar(100),
+    employeur varchar(100),
+    demandeur varchar(100),
+    id_targeter int,
+    date_target datetime default current_timestamp,
+    id_untargeter int,
+    date_untarget datetime,
+    procedure text
+
+)

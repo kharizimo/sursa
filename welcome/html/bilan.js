@@ -1,0 +1,14 @@
+$(function(){
+    $('#form').on('submit',function(e){
+        e.preventDefault()
+        document.location='notice'
+    })
+    $('#check').on('change',function(){
+        if($(this).is(':checked')){
+            $('#autres_symptomes').prop('disabled',true).val('R.A.S')
+        }
+        else{
+            $('#autres_symptomes').prop('disabled',false).val('')
+        }
+    })
+})

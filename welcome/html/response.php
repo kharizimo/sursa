@@ -1,10 +1,7 @@
-<?php 
-$v_user=$_SESSION['v-user']??'';
+dd<?php 
+$v_user=$_SESSION['vuser']??'';
 $id=Db::get("select id data from voyage where code='$token' and date_exp>now()");
-if(!$id){
-    header("location:404");
-    exit();
-}
+
 ?>
 <div class="row"><div class="col">
     <div class="card card-form">
@@ -17,7 +14,7 @@ if(!$id){
             </div>
             <div class="row"><div class="col text-bold text-danger text-center mb-4">Votre Pass Sanitaire n'est valide que pendant 4 jours</div></div>
             <div class="row"><div class="col">
-                <div class="form-group text-center"><a href="frame.php?token=<?=$token?>" target="_blank" class="btn btn-danger">Télécharger</a></div>
+                <div class="form-group text-center"><a href="reports/pass-sanitaire?toke=<?=$token?>" target="_blank" class="btn btn-danger">Télécharger</a></div>
                 <div class="form-group text-center"><a href="./" class="btn btn-outline-danger"> Accueil <span class="fa fa-home"></span></a></div>
             </div></div>
         </div>

@@ -146,6 +146,10 @@
 <script><?php require 'modals.js'?></script>
 
 <script>
+  function date_is_valid(index){
+        const d = new Date(index);
+        return !isNaN(d.getTime()) && d.getDate() === d.getUTCDate() && d.getMonth() === d.getUTCMonth() && d.getFullYear() === d.getUTCFullYear();
+    }
   $(function(){
     
 

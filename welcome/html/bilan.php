@@ -1,112 +1,51 @@
+<?php 
+$opts=Combo::array(['OUI','NON'],['no_data'=>['',"Veuillez completer"]]);
+?>
 <div class="row"><div class="col"><div class="card">
     <?=$_card_header?>
     <div class="card-body"><form action="" id="form">
         <div class="row">
+            <?php require_once 'inc.info.php'?>
             <div class="col">
                 <h3>Bilan de santé</h3>
                 <div class="form-group">
                     <label for="">Avez-vous de la fièvre ?</label>
-                    <select name="" id="" class="form-control"></select>
+                    <select name="fievre" id="fievre" class="form-control"><?=$opts?></select>
                 </div>
                 <div class="form-group">
                     <label for="">Avez-vous de la grippe ?</label>
-                    <select name="" id="" class="form-control"></select>
+                    <select name="grippe" id="grippe" class="form-control"><?=$opts?></select>
                 </div>
                 <div class="form-group">
                     <label for="">Toussez-vous ?</label>
-                    <select name="" id="" class="form-control"></select>
+                    <select name="toux" id="toux" class="form-control"><?=$opts?></select>
                 </div>
                 <div class="form-group">
                     <label for="">Avez-vous des difficultés respiratoires ?</label>
-                    <select name="" id="" class="form-control"></select>
+                    <select name="difficultes_respiratoires" id="difficultes_respiratoires" class="form-control"><?=$opts?></select>
                 </div>
                 <div class="form-group">
                     <label for="">Avez-vous une assurance santé ?</label>
-                    <select name="" id="" class="form-control"></select>
+                    <select name="assurance_sante" id="assurance_sante" class="form-control"><?=$opts?></select>
                 </div>
                 <div class="form-group">
-                    <label for="">Autres symptomes</label>
-                    <select name="" id="" class="form-control"></select>
+                    <label for="">
+                        Autres symptomes
+                        <small class="position-absolute pt-1" style="right:0">
+                            <label for="check">Preciser</label> &nbsp;&nbsp;
+                            <input type="checkbox" id="check">
+                        </small>
+                    </label>
+                    <input type="text" id="autres_symptomes" name="autres_symptomes" class="form-control">
                 </div><br>
                 <h3>Personne à contacter en cas d'urgence</h3>
                 <div class="form-group">
                     <label for="">Nom</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="nom_contact" id="nom_contact" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Téléphone</label>
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="" alt="">
-                <hr>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Nom complet</dt>
-                        <dd>Trésor SUKAMI KUYENA</dd>
-                    </dl>
-                    <dl class="col-md-6">
-                        <dt>Nationalité</dt>
-                        <dd>7687656757</dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Email</dt>
-                        <dd>khares@gmail.com</dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Téléphone</dt>
-                        <dd>7687656757</dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Genre</dt>
-                        <dd>M</dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Groupe sanguin</dt>
-                        <dd>O+</dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Poids</dt>
-                        <dd>65</dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Taille</dt>
-                        <dd>1,89</dd>
-                    </dl>
-                </div>
-                <div class="row">
-                    <dl class="col-md-6">
-                        <dt>Date de naissance</dt>
-                        <dd>65</dd>
-                    </dl>
-                    <dl class="col">
-                        <dt>Age</dt>
-                        <dd>1,89</dd>
-                    </dl>
-                </div>
-                <hr>
-                <div class="form-group icheck-danger">
-                    <input type="checkbox" name="fievre" id="fievre">&nbsp;&nbsp;
-                    <label for="fievre">Avez-vous de la fièvre ?</label>
-                </div>
-                <div class="form-group icheck-danger">
-                    <input type="checkbox" name="fievre" id="fievre">&nbsp;&nbsp;
-                    <label for="fievre">Avez-vous de la fièvre ?</label>
-                </div>
-                <div class="form-group icheck-danger">
-                    <input type="checkbox" name="fievre" id="fievre">&nbsp;&nbsp;
-                    <label for="fievre">Avez-vous de la fièvre ?</label>
-                </div>
-                <div class="form-group icheck-danger">
-                    <input type="checkbox" name="fievre" id="fievre">&nbsp;&nbsp;
-                    <label for="fievre">Avez-vous de la fièvre ?</label>
+                    <input type="text" name="telephone_contact" id="telephone_contact" class="form-control">
                 </div>
             </div>
         </div>

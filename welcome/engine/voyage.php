@@ -1,11 +1,12 @@
 <?php 
-if($_a=='tmp-insert'):
+if($_a=='tmp-voyage'):
     $_SESSION['tmp']=$_REQUEST;
     $_SESSION['tmp']['date_voyage']=date('Y-m-d',strtotime("$annee_voyage-$mois_voyage-$jour_voyage"));
     if(strtotime($_SESSION['tmp']['date_voyage'])<time()){
         $_l="msg?_a=date&_o=voyage";
     }
     else{$_l="notice";}
+    exit();
 endif;
 if($_a=='insert'):
     $f=['id_v_user','lang','date_voyage','pays_origine','pays_visite','pays_destination',
